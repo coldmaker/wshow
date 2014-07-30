@@ -1,0 +1,41 @@
+<include file="Public:header" />
+<div class="tabs">
+    <ul>
+        <li class="current"><a href="javascript:void(0)" />插件列表</a></li>
+    </ul>
+</div>
+<div class="toolbar">
+    <eq name="_SESSION[uid]" value="1">
+    <a href="{$toolInfoUrl}" class="btn" /><span>添加插件</span></a>
+    </eq>
+</div>
+<div class="list">
+    <form method="post" action="{$delUrl}" class="del-form" />
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <th width="20%">标题</th>
+                <th width="40%">描述</th>
+                <th width="20%">更新时间</th>
+                <th width="20%">操作</th>
+            </tr>
+	        <empty name="toolList" id="vo">
+	        <tr><td colspan="10" class="empty">暂无相关信息</td></tr>
+            </empty>
+	        <volist name="toolList" id="vo">
+	        <tr>
+	            <td>{$vo.name}</td>
+                <td>{$vo.intro}</td>
+	            <td>{$vo.date_modify|date="Y-m-d H:i", ###}</td>
+                <td>
+                    <eq name="_SESSION['uid']" value="1"><a href="{$toolInfoUrl}&id={$vo.id}" class="mr10">编辑</a>
+                    <a href="{$delUrl}&id={$vo.id}" class="mr10">删除</a></eq>
+                    <a href="{$useUrl}&id={$vo.id}">{$vo.useStatus}</a></td>
+            </tr>
+	        </volist>
+        </table>
+    </form>
+</div>
+<div class="toolbar">
+    <div class="page right">{$pageHtml}</div>
+</div>
+<include file="Public:footer"/>

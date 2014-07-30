@@ -1,0 +1,8 @@
+<volist name="extList" id="vo">
+<input type="hidden" name="ext[{$key}][id]" value="{$vo.val_id}" />
+<input type="hidden" name="ext[{$key}][ext_id]" value="{$vo.id}" />
+<dl>
+    <dt>{$vo.title}：</dt>
+    <dd><input type="text" name="ext[{$key}][value]" value="{$vo.value}" /></dd>
+</dl>
+</volist>

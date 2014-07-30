@@ -1,0 +1,84 @@
+<!--弹出框-->
+<div id="dialog">
+  <ul>
+    <li><a href="#tabs-1">在线图库</a></li>
+    <li><a href="#tabs-2">本地上传</a></li>
+  </ul>
+  <div id="tabs-1">
+    <div id="select">
+      <select name="gallery_pic" id="gallery">
+      </select>
+    </div>
+    <div id="imgList">
+    </div>
+  </div>
+  <div id="tabs-2">
+    <form id="imgUpload" method="post" onsubmit="return uploadImg()" enctype="multipart/form-data">
+      <ul>
+        <li>图片标题：<input type="text" name="title" /></li>
+        <li>浏览：<input type="file" name="pic" /></li>
+        <li><input type="submit" value="上传" /></li>
+      </ul>
+    </form>
+  </div>
+</div>
+<script>
+  function uploadImg(){
+    $.post(
+      "{:U('Home/Gallery/uploadImage')}",
+      $("#imgUpload").serialize(),
+      function(data){
+        alert(data);
+      },
+      'json'
+    );
+    return false;
+  }
+
+  $(function(){
+    /* 在线图片和本地上传切换 */
+    $("#dialog").tabs();
+
+    /* 获取图库列表 */
+    $.get(
+        "{:U('Home/Gallery/getGalleryList')}",
+        function(data){
+            $("#gallery").html(data);
+        });
+
+    /* 动态加载图片信息 */
+    function loadImgList(){
+        $("#imgList").load(
+            "{:U('Home/Gallery/showImgList')}",
+            {gallery_id: $("#gallery").val()}
+            );
+        }
+
+    /* 打开会话框 */
+    $("#changeImg").click(function(){
+        $("#dialog").dialog("open");
+        $("#gallery").change(function(){loadImgList()});
+        loadImgList();
+        });
+    $("#dialog").dialog({
+        autoOpen: false,
+        title: '选择图片',
+        height: 400,
+        width: 640,
+        buttons: [
+        {
+            text: '确定',
+            click: function(){
+                var img_id = $("#imgList").find('input:checked').val();
+                if(img_id != null){
+                    $("#img").val(img_id);
+                    }
+                $(this).dialog('close')}
+        },
+        {
+            text: '取消',
+            click: function(){ $(this).dialog('close')}
+        }]
+        })
+    });
+</script>

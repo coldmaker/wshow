@@ -1,0 +1,42 @@
+<include file="Public:header" />
+<div class="tabs">
+    <ul>
+        <li class="current"><a href="javascript:void(0)">菜单信息</a></li>
+    </ul>
+</div>
+<div class="edit">
+    <form method="post" action="{$infoUrl}" enctype="multipart/form-data" role="form">
+        <input type="hidden" name="id" value="{$info.id}" />
+        <dl>
+            <dt>上级菜单名称</dt>
+            <dd><select name="parent_id">
+                <option value="0">--请选择上级菜单--</option>
+                <volist name="menuList" id="vo">
+                <option value="{$vo.id}" <eq name="info[parent_id]" value="$vo[id]">selected="selected"</eq> >{$vo.name}</option>
+                </volist>
+            </select></dd>
+        </dl>
+        <dl>
+            <dt>菜单名称：</dt>
+            <dd><input type="text" name="name" value="{$info.name}" class="w300" placeholder="请输入菜单名称" /></dd>
+        </dl>
+        <dl>
+            <dt>菜单类型</dt>
+            <dd><input type="radio" name="type" value="view" <eq name="info[type]" value="view">checked="checked"</eq> />链接
+            <input type="radio" name="type" value="click" <eq name="info[type]" value="click">checked="checked"</eq> />关键字</dd>
+        </dl>
+        <dl>
+            <dt>菜单值：</dt>
+            <dd><input type="text" name="value" value="{$info.value}" class="w300" placeholder="请输入菜单值" /></dd>
+        </dl>
+        <dl>
+            <dt>排序：</dt>
+            <dd><input type="number" name="sort_order" value="{$info.sort_order}" class="w300" /></dd>
+        </dl>
+        <dl>
+            <dt></dt>
+            <dd><input type="submit" value="更新" /></dd>
+        </dl>
+    </form>
+</div>
+<include file="Public:footer" />

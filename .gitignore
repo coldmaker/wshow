@@ -1,0 +1,23 @@
+# ignore the app/Runtime dir
+app/Runtime/
+
+# ignore the emacs editor cache file
+*~
+
+# ignore the config file
+app/Conf/config.php
+
+# ignore the data file
+data/
+
+# ignore the sql file
+*.sql
+
+# ignore the zip rar file
+*.rar
+*.zip
+
+# ignore the mobile template
+app/Tpl/Mobile
+!app/Tpl/Mobile/Default
+!app/Tpl/Mobile/Public

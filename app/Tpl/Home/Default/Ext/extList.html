@@ -1,0 +1,44 @@
+<div class="toolbar">
+    <a href="{$addUrl}" class="btn"><span>添加属性</span></a>
+</div>
+<form action="{$delUrl}" method="post" class="del-form">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <th width="5%"><input type="checkbox" class="check-all" /></th>
+                <th width="20%">属性名称</th>
+                <th width="20%">类型</th>
+                <th width="15%">标签</th>
+                <th width="15%">排序</th>
+                <th width="10%">更新时间</th>
+                <th width="15%">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <empty name="extList">
+                <tr>
+                <td colspan="11" class="empty">暂无相关信息</td>
+                </tr>
+            <else />
+            <volist name="extList" id="vo">
+                <tr>
+                <td><input type="checkbox" name="id[]" value="{$vo.id}"></td>
+                <td>{$vo[title]}</td>
+                <td>{$vo[type]}</td>
+                <td>{$vo[lable]}</td>
+                <td>{$vo[sort_order]}</td>
+                <td>{$vo[date_modify]|date="Y-m-d H:i", ###}</td>
+                <td>
+                    <a href="{$infoUrl}&id={$vo.id}" class="mr10">编辑</a>
+                    <a href="{$delUrl}&id={$vo.id}">删除</a>
+                </td>
+              </tr>
+            </volist>
+            </empty>
+        </tbody>
+    </table>
+</form>
+<div class="toolbar">
+    <div class="page right">{$pageHtml}</div>
+    <a href="javascript:void(0)" class="btn del-btn"><span>删除</span></a>
+</div>

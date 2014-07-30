@@ -1,0 +1,33 @@
+<include file="../Public/header" />
+<div class="tabs">
+    <ul>
+        <li class="current"><a href="javascript:void(0)">模版信息</a></li>
+    </ul>
+</div>
+<div class="edit">
+    <form action="{$tplInfoUrl}" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="{$tplInfo.id}" />
+        <input type="hidden" name="theme_id" value="{$theme_id}" />
+        <dl>
+            <dt>模版名称：</dt>
+            <dd><input type="text" name="name" value="{$tplInfo.name}" /></dd>
+        </dl>
+        <dl>
+            <dt>标记：</dt>
+            <dd><input type="text" name="spell" value="{$tplInfo.spell}" /></dd>
+        </dl>
+        <dl>
+            <dt>排序：</dt>
+            <dd><input type="number" name="sort_order" value="{$tplInfo.sort_order}" /></dd>
+        </dl>
+        <dl>
+            <dt>状态：</dt>
+            <dd><input type="radio" name="status" value="1" <eq name="tplInfo[status]" value="1">checked="checked"</eq> />使用
+            <input type="radio" name="status" value="0" <eq name="tplInfo[status]" value="0">checked="checked"</eq> />不使用</dd>
+        <dl>
+            <dt>&nbsp;</dt>
+            <dd><input type="submit"  value="提 交" class="btn submit-btn" /></dd>
+        </dl>
+    </form>
+</div>
+<include file="../Public/footer" />

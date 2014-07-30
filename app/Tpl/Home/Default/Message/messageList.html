@@ -1,0 +1,62 @@
+<include file="Public:header" />
+<div class="tabs">
+    <ul>
+        <li class="current"><a href="javascript:void(0)" class="current">信息列表</a></li>
+    </ul>
+</div>
+<div class="search">
+    <form action="{$searchUrl}" method="post">
+        <table width="100%">
+            <th width="80">名称：</th>
+            <td>
+                <input type="text" name="search" />
+                <input type="submit" value="搜索" class="btn search-btn" />
+            </td>
+        </table>
+    </form>
+</div>
+<div class="toolbar">
+</div>
+<div class="list">
+    <form action="{$delUrl}" method="post" class="del-form">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <thead>
+                <tr>
+                    <th width="5%"><input type="checkbox" class="check-all" /></th>
+                    <th width="20%">信息类型</th>
+                    <th width="20%">留言者姓名</th>
+                    <th width="20%">手机号码</th>
+                    <th width="10%">内容</th>
+                    <th width="10%">留言时间</th>
+                    <th width="15%">操作</th>
+                </tr>
+            </thead>
+            <tbody>
+            <empty name="messageList">
+                <tr>
+                    <td colspan="11" class="empty">暂无相关信息</td>
+                </tr>
+            <else />
+            <volist name="messageList" id="vo">
+                <tr>
+                    <td><input type="checkbox" name="id[]" value="{$vo.id}"></td>
+                    <td>{$vo.type_name}</td>
+                    <td>{$vo.guest}</td>
+                    <td>{$vo.mobile_name}</td>
+                    <td>{$vo.info}</td>
+                    <td>{$vo[date_modify]|date="Y-m-d H:i", ###}</td>
+                    <td>
+                        <a href="{$delUrl}&id={$vo.id}">删除</a>
+                    </td>
+                </tr>
+            </volist>
+            </empty>
+        </tbody>
+    </table>
+</form>
+</div>
+<div class="toolbar">
+    <div class="page right">{$pageHtml}</div>
+    <a href="javascript:void(0)" class="btn del-btn"><span>删除</span></a>
+</div>
+<include file="Public:footer" />

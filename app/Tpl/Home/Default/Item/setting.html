@@ -1,0 +1,66 @@
+<include file="Public:header" />
+<div class="tabs">
+    <ul>
+        <li class="current"><a href="javascript:void(0)" class="current">微网设置</a></li>
+    </ul>
+</div>
+<div class="edit">
+    <form method="post" action="{$settingUrl}" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="{$siteInfo.id}" />
+        <dl>
+            <dt>微网名称：</dt>
+            <dd><input type="text" name="site_name" value="{$siteInfo.site_name}" class="w200" /></dd>
+        </dl>
+        <dl>
+            <dt>LOGO</dt>
+            <notempty name="siteInfo[logo_name]">
+            <dd><img src="{$siteInfo.logo_name}" height="50px" /></dd>
+            </notempty>
+            <dd><input type="file" name="pic" /></dd>
+            <dd><a href="javascript:void(0)" id="changeImg" />更改LOGO</a>
+            <input type="hidden" name="logo" id="img" value="{$siteInfo.logo}" />
+        </dl>
+        <dl>
+            <dt>微网链接：</dt>
+            <dd><p>{$siteInfo.url}</p></dd>
+        </dl>
+        <dl>
+            <dt>客服号码：</dt>
+            <dd><input type="tel" name="tel" value="{$siteInfo.tel}" class="w200" /></dd>
+        </dl>
+        <dl>
+            <dt>地址：</dt>
+            <dd><input type="text" name="address" value="{$siteInfo.address}" class="w200" /></dd>
+        </dl>
+        <dl>
+            <dt>邮箱：</dt>
+            <dd><input type="email" name="email" value="{$siteInfo.email}" class="w200" /></dd>
+        </dl>
+        <dl>
+            <dt>主题：</dt>
+            <dd><p>{$siteInfo.theme_name}</p><a href="{:U('Home/Theme/themeList')}" /><span>->查看更多主题</span></a></dd>
+        </dl>
+        <dl>
+            <dt>首页幻灯片：</dt>
+            <dd><select name="banner_id">
+                <volist name="galleryList" id="vo">
+                <option value="{$vo.id}" <eq name="siteInfo[banner_id]" value="$vo[id]">selected="selected"</eq> >{$vo.title}</option>
+                </volist>
+            </select></dd>
+        </dl>
+        <dl>
+            <dt>经度：</dt>
+            <dd><input type="text" name="longitude" value="{$siteInfo.longitude}" class="w200" /></dd>
+        </dl>
+        <dl>
+            <dt>纬度：</dt>
+            <dd><input type="text" name="latitude" value="{$siteInfo.latitude}" class="w200" /></dd>
+        </dl>
+        <dl>
+            <dt></dt>
+            <dd><input type="submit" value="更 新" class="btn submit-btn" /></dd>
+        </dl>
+    </form>
+</div>
+<include file="Public:gallery" />
+<include file="Public:footer" />

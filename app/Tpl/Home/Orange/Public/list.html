@@ -1,0 +1,156 @@
+<h3 class="page-header">{$title}</h3>
+
+<!-- 面包屑导航 -->
+<notempty name="bread_list">
+<include file="Public:nav_min" />
+</notempty>
+
+<div class="rwo" style="margin-bottom:10px;">
+  <input class="form-control input-sm col-sm-5" id="search" type="name" style="width:300px;margin-right:5px;">
+  <button class="btn btn-primary btn-sm" id="search_btn">搜索</button>
+</div>
+<div class="table-responsive" style="border-bottom: 1px solid #EEEEEE;padding-bottom: 9px;">
+<table class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      <th><input type="checkbox" id="check_all"></th>
+      <volist name="field_list" id="vo">
+
+      <if condition="$vo[type] eq 'hidden'">
+      <else />
+      <th>{$vo.title}</th>
+      </if>
+
+      </volist>
+    </tr>
+    </thead>
+    <tbody>
+    <volist name="field_info" id="vo">
+    <tr>
+        <td><input type="checkbox" name="id[]" value="{$vo.id}"></td>
+        <volist name="field_list" id="voo">
+
+        <!-- 如果字段值为空 -->
+        <!--empty name="vo[$voo[name]]">
+        <td>无</td>
+        <else /-->
+
+        <!-- 如果是时间 -->
+        <if condition="$voo[type] eq 'date'">
+        <td>{$vo[$voo[name]]|date="Y-m-d H:i",###}</td>
+
+        <!-- 如果是文本字段 -->
+        <elseif condition="$voo[type] eq 'text'" />
+        <td class="input_text" data-id = "{$vo.id}" data-name="{$voo[name]}">{$vo[$voo[name]]}</td>
+
+        <!-- 如果是隐藏字段 -->
+        <elseif condition="$voo[type] eq 'hidden'" />
+
+        <!-- 如果是图片 -->
+        <elseif condition="$voo[type] eq 'path'" />
+        <td><img src="{$vo[$voo[name]]}" height="50px" /></td>
+
+        <!-- 如果是单选字段 -->
+        <elseif condition="$voo[type] eq 'radio'" />
+        <td>{$vo[$voo[name]]}</td>
+
+        <!-- 如果是操作列表 -->
+        <elseif condition="$voo[type] eq 'action_list'" />
+            <td>
+            <volist name="vo[action_list]" id="vooo">
+
+            <!-- 如果是编辑操作 -->
+            <if condition="$vooo[type] eq 'edit'">
+            <a href="javascript:;" onclick="loadMain('{$vooo.url}')" title="编辑"><i class="fa fa-edit" style="margin-right:10px;"></i></a>
+
+            <!-- 如果是列表操作 -->
+            <elseif condition="$vooo[type] eq 'ls'" />
+            <a href="javascript:;" onclick="loadMain('{$vooo.url}')" title="展开"><i class="fa fa-sitemap" style="margin-right:10px;"></i></a>
+
+            <!-- 如果是删除操作 -->
+            <else />
+            <a href="javascript:;" title="删除"><i class="fa fa-trash-o" style="color:red;" data-toggle="modal" data-target="#isdelete" data-href="{$vooo.url}"></i></a>
+            </if>
+            </volist>
+            </td>
+        <else />
+        <td>{$vo[$voo[name]]}</td>
+        </if>
+
+        <!--/empty-->
+        </volist>
+    </tr>
+    </volist>
+    </tbody>
+</table>
+</div>
+
+<!-- 按钮 -->
+<volist name="btn_list" id="vo">
+<button class="btn btn-{$vo.class}"
+<eq name="vo[type]" value="form">
+    onclick="sendForm('{$vo.url}')"
+<else />
+    onclick="loadMain('{$vo.url}')"
+</eq>
+ style="margin-right:5px;margin-top: 10px;">{$vo.title}</button>
+</volist>
+
+
+<!-- 分页 -->
+<notempty name="page_list">
+<ul class="pagination" style="float:right;">
+    {$page_list}
+</ul>
+</notempty>
+
+<include file="Public:del" />
+<script>
+/** 列表全选 **/
+$("#check_all").click(function(){
+  var checked = this.checked;
+  if (checked == true) {
+    $('input[name="id[]"]').attr('checked','true');
+  } else {
+    $('input[name="id[]"]').removeAttr('checked');
+  }
+})
+
+/** 文本字段 **/
+$(".input_text").dblclick(function(){
+  var name = $(this).attr('data-name');
+  var value = $(this).html();
+  var form_html = "<input style='width:100px;' name='"+name+"' value='"+value+"' type='text' id='current_input' onBlur='changeInput()'>";
+  $(this).html(form_html);
+  $("#current_input").focus();
+})
+
+/** 搜索 **/
+$("#search_btn").click(function(){
+  var info = $("#search").val();
+  loadMain(current_url+'&search='+info);
+})
+
+function changeInput(){
+  var current = $("#current_input");
+  var val = current.val();
+  var id = current.parent(".input_text").attr('data-id');
+  var name = current.parent(".input_text").attr('data-name');
+  current.parent(".input_text").html(val);
+
+  var form_url = '{$form_url}';
+  var data = {id:id};
+  data[name] = val;
+  if(form_url != ''){
+    $.post(form_url,data);
+  }
+}
+
+
+/** 分页链接修复 **/
+$('.pagination li a').click(function(e) {
+  e.preventDefault();
+  var url = $(this).attr('href');
+  loadMain(url);
+});
+</script>

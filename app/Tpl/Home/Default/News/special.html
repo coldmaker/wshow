@@ -1,0 +1,39 @@
+<include file="Public:header" />
+<div class="tabs">
+    <ul>
+        <li class="current"><a href="javascript:void(0)">{$keyword}回复</a></li>
+    </ul>
+</div>
+<div class="edit">
+    <form method="post" action="{$editUrl}" enctype="multipart/form-data" role="form">
+        <input type="hidden" name="news[id]" value="{$newsInfo.id}" />
+        <input type="hidden" name="route[id]" value="{$routeInfo.id}" />
+        <input type="hidden" name="meta[id]" value="{$metaInfo.id}" />
+        <input type="hidden" name="route[keyword]" value="{$keyword}" />
+        <dl>
+            <dt>标题：</dt>
+            <dd><input type="text" name="meta[title]" value="{$metaInfo[title]}" placeholder="请输入图文标题" />
+        </dl>
+        <dl>
+            <dt>封面：</dt>
+            <notempty name="metaInfo[cover]"><dd><img src="{$metaInfo[cover_name]}" height="50" /></dd></notempty>
+            <dd><input type="file" name="pic" /></dd>
+            <dd><a href="javascript:void(0)" id="changeImg" >更换封面</a></dd>
+            <input type="hidden" name="meta[cover]" id="img" value="{$metaInfo[cover]}" />
+        </dl>
+        <dl>
+            <dt>描述：</dt>
+            <dd><textarea name="meta[description]" rows="4"  cols="80" placeholder="图文描述" />{$metaInfo[description]}</textarea></dd>
+        </dl>
+        <dl>
+            <dt>链接地址：</dt>
+            <dd><input type="url" name="meta[url]" value="{$metaInfo[url]}" placeholder="请输入链接地址" class="w600" /></dd>
+        </dl>
+        <dl>
+            <dt></dt>
+            <dd><input type="submit" value="更新" class="btn submit-btn" /></dd>
+        </dl>
+    </form>
+</div>
+<include file="Public:gallery" />
+<include file="Public:footer" />

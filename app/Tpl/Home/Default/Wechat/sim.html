@@ -1,0 +1,27 @@
+<include file="../Public/header" />
+<div class="tabs">
+    <ul>
+        <li class="current"><a href="javascript:void(0)">微信接口模拟</a></li>
+    </ul>
+</div>
+<div class="edit">
+    <form action="{$url}" method="post" enctype="multipart/form-data">
+        <dl>
+            <dt>接口地址：</dt>
+            <dd><input type="url" name="url" value="{$testUrl}" class="w500" /></dd>
+        </dl>
+        <dl>
+            <dt>XML文本：</dt>
+            <dd><textarea name="xml" cols="80" rows="8">{$testXml}</textarea></dd>
+        </dl>
+        <dl>
+            <dt>结果：</dt>
+            <dd>{$result}</dd>
+        </dl>
+        <dl>
+            <dt>&nbsp;</dt>
+            <dd><input type="submit"  value="提 交" class="btn submit-btn" /></dd>
+        </dl>
+    </form>
+</div>
+<include file="../Public/footer" />

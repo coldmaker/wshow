@@ -1,0 +1,52 @@
+<include file="Public:header" />
+<div class="tabs">
+    <ul>
+        <li class="current"><a href="javascript:void(0)" class="current">基本信息</a></li>
+    </ul>
+</div>
+<div class="edit">
+    <form method="post" action="{$editUrl}" enctype="multipart/form-data" role="form">
+    <input type="hidden" name="id" value="{$userInfo.id}" />
+    <dl>
+        <dt>头像</dt>
+        <notempty name="userInfo[avatar]"><dd><img src="{$userInfo[avatar_name]}" height="80" /></p></notempty>
+        <input type="hidden" name="avatar" id="img" value="{$userInfo.avatar}" />
+        <input type="file" name="pic" />
+        <dd><a href="javascript:void(0)" id="changeImg" class="ui-button">或选择图片</a></dd>
+    </dl>
+    <dl>
+        <dt>用户名：</dt>
+        <dd><input type="text" name="name" value="{$userInfo.name}" placeholder="请输入用户名" class="w200" disabled="disabled" /></dd>
+    </dl>
+    <dl>
+        <dt>手机号码：</dt>
+        <dd><input type="tel" name="mobile" value="{$userInfo.mobile}" placeholder="请输入您的手机号码" class="w200"/></dd>
+    </dl>
+    <dl>
+        <dt>接口地址：</dt>
+        <dd><p>{$userInfo.url}</p></dd>
+    </dl>
+    <dl>
+        <dt>接口TOKEN：</dt>
+        <dd><input type="text" name="token" value="{$userInfo.token}" class="w200" /></dd>
+    </dl>
+    <dl>
+        <dt>APPID：</dt>
+        <dd><input type="text" name="appid" value="{$userInfo.appid}" class="w200" /></dd>
+    </dl>
+    <dl>
+        <dt>APPSECRECT：</dt>
+        <dd><input type="text" name="appsecrect" value="{$userInfo.appsecrect}" class="w200" /></dd>
+    </dl>
+    <dl>
+        <dt>本次登录IP：</dt>
+        <dd><p>{$_SESSION[current_ip]}</p>
+    </dl>
+    <dl>
+        <dt></dt>
+        <dd><input type="submit" value="更新" class="btn submit-btn" /></dd>
+    </dl>
+    </form>
+</div>
+<include file="Public:gallery" />
+<include file="Public:footer" />

@@ -1,0 +1,51 @@
+<include file="Public:header" />
+<div class="tabs">
+    <ul>
+        <li class="current"><a href="javascript:void(0)">子图文信息</a></li>
+    </ul>
+</div>
+<div class="edit">
+    <form method="post" action="{$editUrl}" enctype="multipart/form-data">
+        <input type="hidden" name="meta[id]" value="{$metaInfo[id]}" />
+        <input type="hidden" name="meta[news_id]" value="{$news_id}" />
+        <dl>
+            <dt>标题：</dt>
+            <dd><input type="text" name="meta[title]" value="{$metaInfo.title}" /></dd>
+        </dl>
+        <dl>
+            <dt>封面：</dt>
+            <notempty name="metaInfo[cover]"><dd><img src="{$metaInfo[cover_name]}" height="50px" /></dd></notempty>
+            <dd><input type="file" name="pic" /></dd>
+            <dd><a href="javascript:void(0)" id="changeImg">更换封面</a></dd>
+            <input type="hidden" name="meta[cover]" id="img" value="{$metaInfo[cover]}" />
+        </dl>
+        <dl>
+            <dt>描述：</dt>
+            <dd><textarea name="meta[description]" rows="4" cols="80">{$metaInfo.description}</textarea></dd>
+        </dl>
+        <dl>
+            <dt>内容：</dt>
+            <dd><textarea id="content" name="meta[content]" style="width:700px; height:250px;">{$metaInfo[content]}</textarea></dd>
+        </dl>
+        <dl>
+            <dt>链接：</dt>
+            <dd><input type="url" name="meta[url]" value="{$metaInfo[url]}" class="w300" /></dd>
+        </dl>
+        <dl>
+            <dt>排序：</dt>
+            <dd><input type="number" name="meta[sort_order]" value="{$metaInfo.sort_order}" /></dd>
+        </dl>
+        <dl>
+            <dt>状态：</dt>
+            <dd><input type="radio" name="meta[status]" value="1" <eq name="metaInfo[status]" value="1"> checked="checked"</eq>/>启用
+            <input type="radio" name="meta[status]" value="0" <eq name="metaInfo[status]" value="0"> checked="checked"</eq>/>禁用</dd>
+        </dl>
+        <dl>
+            <dt></dt>
+            <dd><input type="submit"  class="btn submit-btn" value="更新"/></dd>
+        </dl>
+    </form>
+</div>
+<include file="Public:gallery" />
+<include file="Public:editor" />
+<include file="Public:footer" />
