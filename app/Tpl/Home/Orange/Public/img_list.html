@@ -44,6 +44,32 @@ function selImg(id){
   $("#img_"+id).siblings().removeClass('active');
   $("#selImgVal").val(id);
 }
+/** 文本字段 **/
+$(".input_text").dblclick(function(){
+  var name = $(this).attr('data-name');
+  var value = $(this).html();
+  var form_html = "<input style='width:100px;' name='"+name+"' value='"+value+"' type='text' id='current_input' onBlur='changeInput()'>";
+  $(this).html(form_html);
+  $("#current_input").focus();
+})
+/** 搜索 **/
+$("#search_btn").click(function(){
+  var info = $("#search").val();
+  loadMain(current_url+'&search='+info);
+})
+function changeInput(){
+  var current = $("#current_input");
+  var val = current.val();
+  var id = current.parent(".input_text").attr('data-id');
+  var name = current.parent(".input_text").attr('data-name');
+  current.parent(".input_text").html(val);
+  var form_url = '{$form_url}';
+  var data = {id:id};
+  data[name] = val;
+  if(form_url != ''){
+    $.post(form_url,data);
+  }
+}
 </script>
 
 

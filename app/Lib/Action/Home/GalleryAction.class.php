@@ -48,7 +48,7 @@ class GalleryAction extends HomeAction
     }
 
 
-    /**
+   /*
      * get the gallery list for add new img
      */
     public function getGalleryList()
