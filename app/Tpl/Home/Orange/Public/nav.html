@@ -1,0 +1,86 @@
+<!-- Fixed navbar -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- 相应式导航栏 -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Wshow</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Ws<span>how</span></a>
+    </div>
+
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav" id="topMenu">
+        <volist name="menu" id="vo">
+        <li><a href="#{$vo.tag}">{$vo.title}</a></li>
+        </volist>
+        <li><a href="javascript:;" onclick="loadMain('dd.html')">数据字典</a></li>
+        <li><a href="javascript:;" onclick="loadMain('dbDesign.html')">数据库设计</a></li>
+        <li><a href="javascript:;" onclick="loadMain('fwDesign.html')">架构设计</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="javascript:;" onclick="loadMain(0)" title="刷新界面"><i class="fa fa-refresh"></i></a></li>
+        <li><a href="{:U('Home/Public/logout')}" title="退出登陆"><i class="fa fa-sign-out"></i></a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <!-- Left Menu -->
+    <div class="col-sm-3 col-md-2 sidebar">
+      <div class="user-data clearfix">
+        <img class="img-circle img-responsive fl" src="<php>echo getPicPath(D('GalleryMeta')->getImg($_SESSION['userInfo']['avatar']),'m');</php>" style="height:68px;width:68px;" title="头像">
+        <h4 style="color:#fff;">{$_SESSION[userInfo][name]}</h4>
+	<p>
+	  <a href="##"><i class="fa fa-user"></i></a>
+	  <a href="##"><i class="fa fa-envelope-o"></i></a>
+	  <a href="##"><i class="fa fa fa-sign-out"></i></a>
+	</p>
+      </div>
+      <ul class="nav nav-sidebar" id="index">
+        <volist name="menu[0][menu]" id="vo">
+          <li>
+            <a data-toggle="collapse" data-parent="#index" href="#{$vo.id}" class="sidebar-nav">
+              <i class="fa fa-{$vo.ico}"></i>
+              <span style="margin-left:20px;">{$vo.title}</span>
+              <i class="fa fa-angle-right pull-right"></i>
+	      <span class="selected"> </span>
+            </a>
+            <ul id="{$vo.id}" class="collapse sub-menu">
+              <volist name="vo[meta]" id="voo">
+                <li data-href="{$voo.url}" style="color:#fff;" class="link" data-parent="#{$vo.id}">
+                <i class="fa fa-{$voo.ico}"></i>
+                  {$voo.title}
+                </li>
+              </volist>
+            </ul>
+          </li>
+        </volist>
+      </ul>
+      <ul class="nav nav-sidebar hidden" id="setting">
+        <volist name="menu[1][menu]" id="vo">
+          <li>
+            <a data-toggle="collapse" data-parent="#setting" href="#{$vo.id}" class="sidebar-nav">
+              <i class="fa fa-user"></i>
+              <span style="margin-left:20px;">{$vo.title}</span>
+              <i class="fa fa-angle-right pull-right"></i>
+	      <span class="selected"> </span>
+            </a>
+            <ul id="{$vo.id}" class="collapse sub-menu">
+              <volist name="vo[meta]" id="voo">
+                <li data-href="{$voo.url}" style="color:#fff;" class="link">
+                  <i class="fa fa-book"></i>
+                  {$voo.title}
+                </li>
+              </volist>
+            </ul>
+           </li>
+          </volist>
+        </ul>
+
+      </div>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">

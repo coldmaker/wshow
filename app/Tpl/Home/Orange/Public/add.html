@@ -1,0 +1,21 @@
+<include file="Public:header" />
+<div class="login pl20 pr20">
+  <div class="container main" style="max-width:460px;">
+    <form class="form-signin" id="form" role="form" onsubmit="return login()">
+    <h2 class="form-signin-heading">用户列表</h2>
+    <p><input name="name" type="text" class="form-control" placeholder="用户名" id="name" autofocus></p>
+    <p><input name="mobile" type="mobile" class="form-control" placeholder="手机号码" id="mobile"></p>
+    <p style="padding-top:10px;"><button class="btn btn-lg btn-danger btn-block" type="submit">添加</button></p>
+    </form>
+  </div> <!-- /container -->
+</div>
+<include file="Public:footer" />
+<script>
+function add(){
+    
+}
+$(function(){
+	var gao=$(window).height();
+	$('.login').height(gao);
+	})
+</script>

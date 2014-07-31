@@ -1,0 +1,2338 @@
+<h2>数据字典</h2>
+<h2>ws_debug_log</h2>
+Table comments: 纠错记录表<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>纠错ID</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        user_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap">1</td>
+            <td>用户ID</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        info    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(255)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>内容</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        date_add    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>时间</td>
+    <td></td>
+</tr>
+        </table>
+<h2>ws_ext</h2>
+
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        res_type    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(50)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>资源类型</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        res_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>资源ID</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        title    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(50)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>标题</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        type    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(50)</td>
+    <td>No</td>
+    <td class="nowrap">text</td>
+            <td>字段类型</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        lable    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(50)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>标签</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        sort_order    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>排序</td>
+    <td></td>
+</tr>
+        </table>
+<h2>ws_ext_val</h2>
+
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        res_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>资源ID</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        ext_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>扩展ID</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        value    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(255)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>扩展内容</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        date_add    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        date_modify    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td></td>
+    <td></td>
+</tr>
+        </table>
+<h2>ws_gallery</h2>
+
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>图库id</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        parent_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>父级ID</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        user_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>用户ID</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        title    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(50)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>图库标题</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        intro    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(255)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>图库简介</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        cover    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(255)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>封面</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        date_add    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>创建时间</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        date_modify    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>更新时间</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>7</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ws_gallery_meta</h2>
+Table comments: 图库图片表<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>图片ID</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        gallery_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        title    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(50)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>标题</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        path    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(255)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>图片路径</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        date_add    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>创建时间</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        date_modify    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>更新时间</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>11</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ws_item</h2>
+
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        parent_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>父级ID</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        user_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        title    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(50)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>标题</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        cover    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(255)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>封面</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        intro    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(255)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>简介</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        info    </td>
+    <td class="nowrap" lang="en" dir="ltr">text</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        api    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(255)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>接口地址</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        status    </td>
+    <td class="nowrap" lang="en" dir="ltr">tinyint(1)</td>
+    <td>No</td>
+    <td class="nowrap">1</td>
+            <td>显示状态，默认1为显示</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        template_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap">1</td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        views    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>浏览量</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        likes    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>like s </td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        sort_order    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>排序</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        date_add    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>添加时间</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        date_modify    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>更新时间</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>24</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ws_item_img</h2>
+
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        item_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>栏目ID</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        title    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(50)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>标题</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        image    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(255)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>图片地址</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        status    </td>
+    <td class="nowrap" lang="en" dir="ltr">tinyint(1)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>状态，默认0为不显示</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        sort_order    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>排序</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>0</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ws_loa</h2>
+Table comments: 权限表<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        module    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(50)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        action    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(50)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        sort_order    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        date_add    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        date_modify    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td></td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>15</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ws_loa_group</h2>
+Table comments: 分组权限表<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        group_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        loa_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        status    </td>
+    <td class="nowrap" lang="en" dir="ltr">tinyint(1)</td>
+    <td>No</td>
+    <td class="nowrap">1</td>
+            <td>操作权限：默认1为可操作</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        date_add    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        date_modify    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>45</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ws_member</h2>
+Table comments: 会员信息表<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>会员ID</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        user_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>用户ID</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        wechat_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>会员微信号</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        name    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(50)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>会员名称</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        avatar    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>头像</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        password    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(255)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>登录密码</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        mobile    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>手机号码</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        email    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(50)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>邮箱地址</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        date_reg    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>注册时间</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        date_login    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>登录时间</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>2</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick even"><td  rowspan="3" >name</td><td  rowspan="3" >BTREE</td><td  rowspan="3" >Yes</td><td  rowspan="3" >No</td><td>name</td><td></td><td>A</td><td>No</td><td  rowspan="3" ></td></tr><tr class="noclick even"><td>mobile</td><td></td><td>A</td><td>No</td></tr><tr class="noclick even"><td>email</td><td>2</td><td>A</td><td>No</td></tr></tbody></table></div>
+    <div>
+<h2>ws_member_action</h2>
+Table comments: 会员行为表<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        member_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>会员ID</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        item_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>栏目ID</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        action    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(50)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>行为名称</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        date_create    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>时间</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        status    </td>
+    <td class="nowrap" lang="en" dir="ltr">tinyint(1)</td>
+    <td>No</td>
+    <td class="nowrap">1</td>
+            <td>行为状态</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>1</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ws_setting</h2>
+Table comments: 网站全局参数表<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>唯一ID</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        user_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>微信ID</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        site_name    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(20)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>站点名称</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        logo    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>网站LOGO</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        url    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>微网链接</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        background    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>首页背景图</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        theme_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap">1</td>
+            <td>主题ID</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        color_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap">1</td>
+            <td>配色ID</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        banner_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>首页幻灯片图库</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        address    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(255)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>详细地址</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        tel    </td>
+    <td class="nowrap" lang="en" dir="ltr">char(15)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>联系电话</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        mobile    </td>
+    <td class="nowrap" lang="en" dir="ltr">char(15)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>手机号码</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        qq    </td>
+    <td class="nowrap" lang="en" dir="ltr">char(12)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>QQ号码</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        email    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(50)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>邮箱</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        longitude    </td>
+    <td class="nowrap" lang="en" dir="ltr">decimal(12,6)</td>
+    <td>No</td>
+    <td class="nowrap">0.000000</td>
+            <td>经度</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        latitude    </td>
+    <td class="nowrap" lang="en" dir="ltr">decimal(12,6)</td>
+    <td>No</td>
+    <td class="nowrap">0.000000</td>
+            <td>维度</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>9</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ws_shop_order</h2>
+Table comments: 购物车<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>购物车ID</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        member_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>会员ID</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        receive_name    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(50)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>收货人姓名</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        receive_mobile    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>收货人手机号码</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        comment    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(255)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>买家留言</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        pay_type    </td>
+    <td class="nowrap" lang="en" dir="ltr">tinyint(1)</td>
+    <td>No</td>
+    <td class="nowrap">1</td>
+            <td>支付方式：默认1为支付宝支付</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        status    </td>
+    <td class="nowrap" lang="en" dir="ltr">tinyint(1)</td>
+    <td>No</td>
+    <td class="nowrap">1</td>
+            <td>订单状态：默认1为提交，2为支付，3为发货，4为收货，5为评价，0为取消</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        date_add    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>创建时间</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        date_modify    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>更新时间</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>0</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ws_shop_order_meta</h2>
+Table comments: 订单<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>订单ID</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        order_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>订单ID</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        item_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>商品ID</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        number    </td>
+    <td class="nowrap" lang="en" dir="ltr">smallint(4)</td>
+    <td>No</td>
+    <td class="nowrap">1</td>
+            <td>数量</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        price    </td>
+    <td class="nowrap" lang="en" dir="ltr">double(6,4)</td>
+    <td>No</td>
+    <td class="nowrap">0.0000</td>
+            <td>单价</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        discount    </td>
+    <td class="nowrap" lang="en" dir="ltr">smallint(4)</td>
+    <td>No</td>
+    <td class="nowrap">100</td>
+            <td>折扣</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        price_count    </td>
+    <td class="nowrap" lang="en" dir="ltr">double(6,4)</td>
+    <td>No</td>
+    <td class="nowrap">0.0000</td>
+            <td>总价</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        date_add    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>添加时间</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        date_modify    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>更新时间</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>0</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ws_tab</h2>
+Table comments: 平台界面选项卡信息表<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>唯一ID</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        parent_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>父ID</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        title    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(20)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>选项卡名称</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        ico    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(50)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>图标</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        tag    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(20)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>选项卡标识</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        intro    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(255)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>功能描述</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        info    </td>
+    <td class="nowrap" lang="en" dir="ltr">text</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>功能详情</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        url    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>链接地址</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        sort_order    </td>
+    <td class="nowrap" lang="en" dir="ltr">smallint(6)</td>
+    <td>Yes</td>
+    <td class="nowrap"><i>NULL</i></td>
+            <td>显示顺序</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        status    </td>
+    <td class="nowrap" lang="en" dir="ltr">tinyint(1)</td>
+    <td>No</td>
+    <td class="nowrap">1</td>
+            <td>显示状态：默认1为管理员显示，用户不显示，2为都显示</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        date_add    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>创建时间</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        date_modify    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>更新时间</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>29</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ws_theme</h2>
+
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        name    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(50)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>主题名称</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        spell    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(50)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>主题标记</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        cover    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>效果图</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        intro    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(255)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>描述</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        author    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(50)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>作者</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        version    </td>
+    <td class="nowrap" lang="en" dir="ltr">double(3,1)</td>
+    <td>No</td>
+    <td class="nowrap">1.0</td>
+            <td>版本</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        status    </td>
+    <td class="nowrap" lang="en" dir="ltr">tinyint(1)</td>
+    <td>No</td>
+    <td class="nowrap">1</td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        date_add    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>创建时间</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        date_modify    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>更新时间</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>5</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick even"><td  rowspan="1" >spell</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>spell</td><td>5</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ws_theme_tpl</h2>
+
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">smallint(6)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>唯一ID</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        theme_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>主题ID</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        name    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(20)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>模板名称</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        spell    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(20)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>模板拼写</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        version    </td>
+    <td class="nowrap" lang="en" dir="ltr">float(3,1)</td>
+    <td>No</td>
+    <td class="nowrap">1.0</td>
+            <td>版本</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        status    </td>
+    <td class="nowrap" lang="en" dir="ltr">tinyint(1)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        sort_order    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>Yes</td>
+    <td class="nowrap">-1</td>
+            <td>显示顺序</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        date_add    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>添加时间</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        date_modify    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>更新时间</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>15</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ws_user</h2>
+
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        group_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>分组ID</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        name    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(50)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>姓名</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        password    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(255)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>密码</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        mobile    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>手机号码</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        avatar    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(255)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>头像</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        key    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(50)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>密钥</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        url    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>接口地址</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        token    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(50)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        appid    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        appsecrect    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        date_reg    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>注册时间</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        date_log    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>上次登录时间</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        ip_log    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(15)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>上次登录Ip</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>4</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ws_user_group</h2>
+Table comments: 用户分组表<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td> </td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        name    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(50)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>分组名称</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        date_add    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>添加时间</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        date_modify    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>更新时间</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>2</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ws_weather</h2>
+Table comments: 天气功能的城市编码表<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>唯一ID</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        city    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(20)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>城市名称</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        citycode    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>城市编码</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>447</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ws_wechat_menu</h2>
+Table comments: 菜单管理<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>唯一ID</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        parent_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>父级ID</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        user_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>用户ID</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        name    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(20)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>菜单名称</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        type    </td>
+    <td lang="en" dir="ltr">enum('view', 'click')</td>
+    <td>No</td>
+    <td class="nowrap">view</td>
+            <td>菜单类型</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        value    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>菜单值：若type为url，则为链接类型；若type为click，则为eventkey</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        sort_order    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap">5</td>
+            <td>排序</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        date_modify    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>更新时间</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>3</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ws_wechat_news</h2>
+
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>唯一ID</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        user_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>用户ID</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        date_add    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>创建时间</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        date_modify    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>更新时间</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>9</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ws_wechat_news_meta</h2>
+Table comments: 图文素材表<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>唯一ID</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        news_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>图文ID</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        title    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(50)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>标题</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        cover    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>封面</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        description    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(255)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>描述</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        content    </td>
+    <td class="nowrap" lang="en" dir="ltr">text</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>详细内容</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        url    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(100)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>链接地址</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        sort_order    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap">255</td>
+            <td>排序</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        status    </td>
+    <td class="nowrap" lang="en" dir="ltr">tinyint(1)</td>
+    <td>No</td>
+    <td class="nowrap">1</td>
+            <td>启用状态：默认1为启用</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        date_add    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>创建时间</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        date_modify    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>修改时间</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>7</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ws_wechat_route</h2>
+Table comments: 响应路由表<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>唯一ID</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        user_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>用户ID</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        obj_type    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(20)</td>
+    <td>No</td>
+    <td class="nowrap">news</td>
+            <td>资源类型</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        obj_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(10)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>资源ID</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        keyword    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(20)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>唯一标识</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        date_add    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>创建时间</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        date_modify    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>修改时间</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>33</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ws_wechat_rss</h2>
+Table comments: RSS订阅回复<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        user_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(11)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>用户ID</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        title    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(50)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>源名称</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        url    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(255)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>链接地址</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        count    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(1)</td>
+    <td>No</td>
+    <td class="nowrap">5</td>
+            <td>rss条数</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        status    </td>
+    <td class="nowrap" lang="en" dir="ltr">tinyint(1)</td>
+    <td>No</td>
+    <td class="nowrap">1</td>
+            <td>默认1为显示</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        date_add    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td></td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        date_modify    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td></td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>1</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ws_wechat_text</h2>
+Table comments: 文本回复<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>唯一ID</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        user_id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>用户ID</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        content    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(255)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>内容</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        date_add    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>创建时间</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        date_modify    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>修改时间</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>4</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ws_wechat_tool</h2>
+Table comments: 插件详情表<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>唯一ID</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        name    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(20)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>插件名称</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        intro    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(255)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>插件描述</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        function    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(20)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>处理函数名称</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        status    </td>
+    <td class="nowrap" lang="en" dir="ltr">tinyint(1)</td>
+    <td>No</td>
+    <td class="nowrap">1</td>
+            <td>插件启用状态：默认1为可用</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        sort_order    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>显示顺序，1为最前</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        date_add    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>创建时间</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        date_modify    </td>
+    <td class="nowrap" lang="en" dir="ltr">int(10)</td>
+    <td>No</td>
+    <td class="nowrap">0</td>
+            <td>修改时间</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>10</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>
+    <div>
+<h2>ws_wechat_tpl</h2>
+Table comments: xml模板信息表<br /><br />
+<table width="100%" class="print">
+<tr><th width="50">Column</th>
+    <th width="80">Type</th>
+    <th width="40">Null</th>
+    <th width="70">Default</th>
+        <th>Comments</th>
+    <th>MIME</th>
+</tr>
+    <tr class="odd">
+    <td class="nowrap">
+        id    </td>
+    <td class="nowrap" lang="en" dir="ltr">mediumint(8)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>唯一ID</td>
+    <td></td>
+</tr>
+        <tr class="even">
+    <td class="nowrap">
+        type    </td>
+    <td class="nowrap" lang="en" dir="ltr">varchar(20)</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>模板类型</td>
+    <td></td>
+</tr>
+        <tr class="odd">
+    <td class="nowrap">
+        texttpl    </td>
+    <td class="nowrap" lang="en" dir="ltr">text</td>
+    <td>No</td>
+    <td class="nowrap"></td>
+            <td>模板数据</td>
+    <td></td>
+</tr>
+        </table>
+<h3>Indexes</h3><div class='no_indexes_defined hide'><div class="notice"><img src="themes/dot.gif" title="" alt="" class="icon ic_s_notice" /> No index defined!</div></div><table id="table_index"><thead><tr><th>Keyname</th><th>Type</th><th>Unique</th><th>Packed</th><th>Column</th><th>Cardinality</th><th>Collation</th><th>Null</th><th>Comment</th></tr></thead><tbody><tr class="noclick odd"><td  rowspan="1" >PRIMARY</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>7</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick even"><td  rowspan="1" >id</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>id</td><td>7</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr><tr class="noclick odd"><td  rowspan="1" >type</td><td  rowspan="1" >BTREE</td><td  rowspan="1" >Yes</td><td  rowspan="1" >No</td><td>type</td><td>7</td><td>A</td><td>No</td><td  rowspan="1" ></td></tr></tbody></table></div>

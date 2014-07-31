@@ -1,0 +1,115 @@
+<input type="file" name="img" id="imgUploadFiles" onchange="handleFiles(this.files)" accept:"image/*" style="display:none;">
+<a id="imgUploadSel" href="#">上传图片</a>
+<div id="dropZone" style="margin:30px; width:500px; height:100px; border:1px dotted grey;">拖拽图片到此位置</div>
+<!--div id="picUploadList"></div>
+
+<button class="btn btn-primary" onclick="sendFiles()">开始上传</button-->
+
+<script>
+$(function(){
+  /* 隐藏上传图片按钮 创建变量 */
+  window.URL = window.URL || window.webkitURL;
+  var fileSelect = document.getElementById("imgUploadSel"),
+  fileElem = document.getElementById("imgUploadFiles");
+  //fileList = document.getElementById("picUploadList");
+  fileSelect.addEventListener("click", function (e) {
+    if (fileElem) {
+      fileElem.click();
+    }
+    e.preventDefault();
+  }, false);
+
+  /* 创建戳拽上传区域 */
+  var dropZone = document.getElementById("dropZone");
+  dropZone.ondragover = dropZone.ondragenter = function(event) {
+    event.stopPropagation();
+    event.preventDefault();
+  }
+
+  /* 拖拽操作 */
+  dropZone.ondrop = function(event) {
+    event.stopPropagation();
+    event.preventDefault();
+
+    var filesArray = event.dataTransfer.files;
+    for (var i=0; i<filesArray.length; i++) {
+      sendFile(filesArray[i]);
+    }
+  }
+})
+
+
+/* 当用户选择图片后，自动显示 */
+function handleFiles(files) {
+  if (!files.length) {
+    //fileList.innerHTML = "<p>没有图片!</p>";
+  } else {
+    for (var i=0; i<files.length; i++) {
+      sendFile(files[i]);
+    }
+
+    //创建图片列表
+    /*
+    var list = document.createElement("ul");
+    for (var i = 0; i < files.length; i++) {
+      var li = document.createElement("li");
+      list.appendChild(li);
+
+      var img = document.createElement("img");
+      img.classList.add("obj");
+      img.src = window.URL.createObjectURL(files[i]);
+      img.height = 60;
+      img.onload = function(e) {
+        window.URL.revokeObjectURL(this.src);
+      }
+      li.appendChild(img);
+
+      var info = document.createElement("span");
+      info.innerHTML = files[i].name + ":&nbsp; " + files[i].size + " bytes";
+      li.appendChild(info);
+    }
+    fileList.appendChild(list);
+    */
+  }
+}
+
+
+/** 单图片上传操作 */
+function fileUpload(img) {
+  var uri = "{:U('Gallery/uploadImage')}";
+  var xhr = new XMLHttpRequest();
+  var fd = new FormData();
+
+  xhr.open("POST", uri);
+  xhr.overrideMimeType('text/plain; charset=x-user-defined-binary');
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      alert(xhr.responseText);}
+  };
+  fd.append('pic', img);
+  xhr.send(fd);
+}
+
+function sendFile(file) {
+  var uri = "{:U('Gallery/uploadImage')}";
+  var xhr = new XMLHttpRequest();
+  var fd = new FormData();
+
+  xhr.open("POST", uri, true);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+      // Handle response.
+      //alert('图片上传成功');
+      var result = xhr.responseText;
+      $("#imgBox").dialog('close');
+      $.get("{:U('Gallery/getImgSrc')}",{'id':result},function(data){
+        $("#resultImg").attr('src',data)});
+      $("#resultImgId").val(result);
+    }
+  };
+  fd.append('myFile', file);
+  // Initiate a multipart/form-data upload
+  xhr.send(fd);
+}
+
+</script>
