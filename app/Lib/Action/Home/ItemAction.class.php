@@ -6,48 +6,6 @@
  */
 class ItemAction extends HomeAction
 {
-    /**
-     * 微网设置
-     */
-    public function setting()
-    {
-        $siteObj = D('Setting');
-        if(empty($_POST)){
-            $fields = array('id','site_name','user_id','tel','address','email','latitude','longitude');
-            $siteInfo = $siteObj->field($fields)->where('user_id='.$_SESSION['uid'])->find();
-            $siteInfo = $siteObj->format($siteInfo, array('logo_name', 'url', 'theme_name'));
-
-            $galleryList = D('Gallery')->where('user_id='.$user_id)->select();
-
-            $fields_all = $siteObj->field_list();
-            $fields[] = 'url';
-
-            $data = array(
-                'title' => '网站设置',
-                'form_url' => U('Item/setting'),
-                'field_list'=>$this->get_field_list($fields_all, $fields),
-                'field_info'=>$siteInfo,
-            );
-            $this->assign($data);
-            $this->display('Public:info');
-            exit;
-        }
-        $data = $this->_post();
-        if(empty($data['id'])){
-            $data['user_id'] = $_SESSION['uid'];
-            if($siteObj->add($data)){
-                echo json_encode(array('code'=>'1','msg'=>'更新成功'));
-            }else{
-                echo json_encode(array('code'=>'0','msg'=>'更新失败'));
-            }
-        }else{
-            if($siteObj->save($data)){
-                echo json_encode(array('code'=>'1','msg'=>'更新成功'));
-            }else{
-                echo json_encode(array('code'=>'0','msg'=>'更新失败'));
-            }
-        }
-    }
 
     /**
      * 内容列表

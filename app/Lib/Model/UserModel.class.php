@@ -63,11 +63,11 @@ class UserModel extends CommonModel{
 
 		//分组
 
-		if(in_array('group_name', $arrFormatField)){
+        if(in_array('group_name', $arrFormatField)){
 
-			$info['group_name'] = ($info['group_id'] == 1) ? '管理员' : '普通会员';
+            $info['group_name'] = ($info['group_id'] == 1) ? '管理员' : '普通会员';
 
-		}
+        }
 
 		//时间
 
