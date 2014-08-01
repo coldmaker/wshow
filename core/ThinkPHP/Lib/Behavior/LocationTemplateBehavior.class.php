@@ -22,7 +22,7 @@ class LocationTemplateBehavior extends Behavior {
     public function run(&$templateFile){
         // 自动定位模板文件
         if(!file_exists_case($templateFile))
-            $templateFile   = $this->parseTemplateFile($templateFile);
+            $templateFile = $this->parseTemplateFile($templateFile);
     }
 
     /**

@@ -66,7 +66,10 @@
             <!-- 如果是列表操作 -->
             <elseif condition="$vooo[type] eq 'ls'" />
             <a href="javascript:;" onclick="loadMain('{$vooo.url}')" title="展开"><i class="fa fa-sitemap" style="margin-right:10px;"></i></a>
-
+            
+            <!-- 如果是回复操作-->
+            <elseif condition="$vooo[type] eq 'text'" />
+            <a href="javascript:;" onclick="loadMain('{$vooo.url}')" title="回复"><i class="fa fa-text" style="margin-right:10px;"></i></a>
             <!-- 如果是删除操作 -->
             <else />
             <a href="javascript:;" title="删除"><i class="fa fa-trash-o" style="color:red;" data-toggle="modal" data-target="#isdelete" data-href="{$vooo.url}"></i></a>

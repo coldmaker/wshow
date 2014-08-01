@@ -150,4 +150,21 @@ class WechatAction extends HomeAction
         echo json_encode(array('code'=>'1','msg'=>'删除成功'));
     }
 
+    public function sim()
+    {
+        $data = array(
+                'form_url'   => U('Wechat/sim'),
+            );
+        $data = $_POST;
+        $data['date_modify'] = time();
+        if(empty($data['id'])){
+           
+            if(D('WechatRoute')->save($data)){
+                echo json_encode(array('code'=>'1','msg'=>'更新成功'));
+            }else{
+                echo json_encode(array('msg'=>'更新失败'));
+            }
+        }
+    }
+
 }
