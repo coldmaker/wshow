@@ -67,7 +67,6 @@ class UserAction extends HomeAction{
             //array_merge 合并数组
             $fields = array_merge($fields,array('banner_list','set_url','api_url'));
             $userInfo = $userObj->format($userInfo, array('api_url', 'avatar_name', 'set_url'));
-
             $tpl_data = array(
                 'title'=>'基本信息',
                 'form_url'=>U('User/basic'),
