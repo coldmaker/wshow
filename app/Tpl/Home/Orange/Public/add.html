@@ -9,13 +9,18 @@
     </form>
   </div> <!-- /container -->
 </div>
-<include file="Public:footer" />
 <script>
-function add(){
-    
+function add(url){
+    $.get(url,
+        '',
+        function(data){
+          window.setTimeout(function(){loadMain(0);},1500);
+          calert(data.msg, data.code);
+        },
+        'json'
+       );
+  return true; 
 }
-$(function(){
-	var gao=$(window).height();
-	$('.login').height(gao);
-	})
 </script>
+
+<include file="Public:footer" />
