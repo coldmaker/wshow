@@ -85,8 +85,8 @@ class UserModel extends CommonModel{
 		}
 
         //api_url
-        if(in_array('url', $arrFormatField)){
-            $info['url'] = 'http://'.$_SERVER['HTTP_HOST'].U('Home/Wx/wxapi', array('user'=>$info['name']));
+        if(in_array('api_url', $arrFormatField)){
+            $info['api_url'] = 'http://'.$_SERVER['HTTP_HOST'].U('Home/Wx/wxapi', array('user'=>$info['name']));
         }
 
         //set_url

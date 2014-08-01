@@ -61,11 +61,11 @@ class UserAction extends HomeAction{
 		$userObj = D('User');
         if(empty($data)){
 		    $id = $_SESSION['uid'];
-            $fields = array('id','avatar','name','mobile','url','address','email','token','appid','appsecrect','site_name','latitude','longitude','banner_id');
+            $fields = array('id','avatar','name','mobile','address','email','token','appid','appsecrect','site_name','latitude','longitude','banner_id');
 		    $userInfo = $userObj->field($fields)->where('id='.$id)->find();
             $fields_all = $userObj->field_list();
             //array_merge 合并数组
-            $fields = array_merge($feilds,array('banner_list','set_url','api_url'));
+            $fields = array_merge($fields,array('banner_list','set_url','api_url'));
             $userInfo = $userObj->format($userInfo, array('api_url', 'avatar_name', 'set_url'));
             $tpl_data = array(
                 'title'=>'基本信息',
